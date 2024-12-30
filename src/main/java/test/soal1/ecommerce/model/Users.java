@@ -1,5 +1,6 @@
 package test.soal1.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,6 +14,8 @@ public class Users {
 
     private String name;
     private String email;
+
+    @JsonIgnore
     private String password;
 
     public Long getId() {
